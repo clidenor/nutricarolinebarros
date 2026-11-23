@@ -1,0 +1,387 @@
+/* Custom styling for Caroline Barros - Nutricionista */
+
+:root {
+  --color-primary: #888020;
+  --color-primary-dark: #645e00;
+  --color-primary-light: #f2f1e6;
+  --color-accent: #3a2413;
+  --color-text: #1f2a24;
+  --color-surface-linen: #f9f8f5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f8f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #88802080;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888020;
+}
+
+/* Smooth selection */
+::selection {
+  background: #88802030;
+  color: #3a2413;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 12px 32px -4px rgba(58, 36, 19, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.35) inset;
+}
+
+/* Floating cards in Hero - Transparent crystal glass */
+.hero-floating-card {
+  background: rgba(255, 255, 255, 0.28) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 16px 36px -8px rgba(58, 36, 19, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.45) inset !important;
+}
+
+.hero-floating-card:hover {
+  background: rgba(255, 255, 255, 0.42) !important;
+  border-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Hero Floating Botanical Leaves (always visible and floating) */
+.hero-leaf {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 35;
+  filter: drop-shadow(0 14px 22px rgba(58, 36, 19, 0.18));
+  display: block;
+}
+
+.glass-header {
+  background: rgba(249, 248, 245, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(58, 36, 19, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-header .header-logo {
+  height: 4.5rem;
+  transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 768px) {
+  .glass-header .header-logo {
+    height: 3.5rem;
+  }
+}
+
+.glass-header.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: rgba(249, 248, 245, 0.98);
+  box-shadow: 0 10px 30px -10px rgba(58, 36, 19, 0.08);
+}
+
+.glass-header.scrolled .header-logo {
+  height: 3.2rem;
+}
+
+@media (max-width: 768px) {
+  .glass-header.scrolled .header-logo {
+    height: 2.75rem;
+  }
+}
+
+/* Time slot buttons in appointment system */
+.time-slot-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.time-slot-btn:hover:not(.selected) {
+  border-color: #888020;
+  background-color: #f2f1e6;
+}
+.time-slot-btn.selected {
+  background-color: #888020;
+  color: #ffffff;
+  border-color: #888020;
+  box-shadow: 0 4px 12px rgba(136, 128, 32, 0.3);
+}
+
+/* Day slot button in appointment system */
+.day-slot-btn {
+  transition: all 0.2s ease;
+}
+.day-slot-btn:hover:not(.selected) {
+  border-color: #888020;
+  background-color: #f2f1e6;
+}
+.day-slot-btn.selected {
+  background-color: #3a2413;
+  color: #ffffff;
+  border-color: #3a2413;
+  box-shadow: 0 4px 12px rgba(58, 36, 19, 0.25);
+}
+
+/* Modal overlay & container */
+#booking-modal {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#booking-modal.hidden-modal {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#booking-modal.visible-modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Service Cards Styling */
+.service-card {
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  border: 1px solid rgba(58, 36, 19, 0.08);
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(58, 36, 19, 0.12), 0 0 0 1px rgba(136, 128, 32, 0.25);
+  border-color: rgba(136, 128, 32, 0.3);
+}
+
+/* ==========================================================================
+   Dual-Direction Infinite Testimonial Marquee
+   ========================================================================== */
+.marquee-wrapper {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 1.5rem;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track-left {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1.5rem;
+  animation: scrollMarqueeLeft 40s linear infinite;
+}
+
+.marquee-track-right {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1.5rem;
+  animation: scrollMarqueeRight 40s linear infinite;
+}
+
+/* Pausa ao passar o mouse */
+.marquee-wrapper:hover .marquee-track-left,
+.marquee-wrapper:hover .marquee-track-right {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollMarqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Testimonial Card Styling */
+.testimonial-card {
+  width: 380px;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 35px -10px rgba(58, 36, 19, 0.12);
+}
+
+@media (max-width: 640px) {
+  .testimonial-card {
+    width: 310px;
+  }
+}
+
+/* ==========================================================================
+   FAQ Accordion Styling
+   ========================================================================== */
+.faq-item {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.faq-item.active {
+  border-color: rgba(136, 128, 32, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(58, 36, 19, 0.06);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding 0.3s ease;
+  opacity: 0;
+}
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  background-color: #888020;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   CTA Card & Floating Leaves Styling (Based on User Reference)
+   ========================================================================== */
+.cta-card-box {
+  background: linear-gradient(135deg, #FFFDF9 0%, #FAF8F2 60%, #F5F1E8 100%);
+  border: 1px solid rgba(58, 36, 19, 0.1);
+  box-shadow: 0 25px 60px -15px rgba(58, 36, 19, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.cta-leaf {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 20;
+  filter: drop-shadow(0 15px 20px rgba(58, 36, 19, 0.15));
+}
+
+/* HD Image Rendering & Crisp Edges */
+.hd-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  filter: contrast(1.03) saturate(1.02) brightness(1.01);
+}
+
+.service-card-featured {
+  background: linear-gradient(180deg, rgba(244, 243, 234, 0.8) 0%, rgba(255, 255, 255, 1) 100%);
+  border: 1.5px solid rgba(136, 128, 32, 0.35);
+  box-shadow: 0 15px 35px -10px rgba(136, 128, 32, 0.12);
+}
+
+/* Counter metric styling */
+.counter-number {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Floating element hover lift */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(58, 36, 19, 0.12);
+}
+
+/* Button glow effect */
+.btn-primary-glow {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-primary-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(136, 128, 32, 0.4);
+}
+
+/* Subtle botanical organic blob animations */
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.06) translate(15px, -10px);
+    opacity: 0.95;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 9s ease-in-out infinite;
+}
+
+/* Gradient background radial */
+.hero-gradient {
+  background: radial-gradient(circle at 75% 35%, rgba(136, 128, 32, 0.12) 0%, rgba(249, 248, 245, 0.6) 45%, #ffffff 80%);
+}
+
+/* ==========================================================================
+   Original Social Brand Buttons Styling
+   ========================================================================== */
+.brand-btn-social {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.brand-btn-social:hover {
+  transform: translateY(-3px) scale(1.08);
+}
+
+.brand-btn-whatsapp {
+  background-color: #25D366;
+}
+.brand-btn-whatsapp:hover {
+  background-color: #20bd5a;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+
+.brand-btn-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.brand-btn-instagram:hover {
+  box-shadow: 0 8px 20px rgba(214, 36, 159, 0.35);
+}
+
+.brand-btn-youtube {
+  background-color: #FF0000;
+}
+.brand-btn-youtube:hover {
+  background-color: #e60000;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.35);
+}
+
+.brand-btn-facebook {
+  background-color: #1877F2;
+}
+.brand-btn-facebook:hover {
+  background-color: #166fe5;
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.35);
+}
+
+.brand-btn-tiktok {
+  background-color: #000000;
+}
+.brand-btn-tiktok:hover {
+  background-color: #111111;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}

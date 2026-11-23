@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caroline Barros | Nutricionista Clínica e Funcional • CRN 23555</title>
+  <meta name="description" content="Nutrição clínica funcional e integrativa para transformar sua relação com o corpo e a comida. Planos alimentares 100% individualizados por Caroline Barros.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logomarca_caroline Barros.png">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            olive: {
+              DEFAULT: '#888020',
+              dark: '#645e00',
+              light: '#f4f3ea',
+              50: '#f8f8f2',
+              100: '#edeccb',
+              600: '#888020',
+              700: '#645e00'
+            },
+            umber: {
+              DEFAULT: '#3a2413',
+              dark: '#26170b',
+              light: '#5d3d23'
+            },
+            textMain: '#1F2A24',
+            linen: '#F9F8F5',
+            pureWhite: '#FFFFFF'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="font-sans text-textMain bg-white antialiased selection:bg-olive-100 selection:text-umber overflow-x-hidden">
+
+  <!-- ========================================================================= -->
+  <!-- 1. HEADER FIXO (GLASSMORPHISM)                                           -->
+  <!-- ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 glass-header transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logomarca Oficial -->
+      <a href="#hero" class="flex items-center gap-3 group py-1" aria-label="Caroline Barros Nutricionista">
+        <img 
+          src="img/logo_clean.png" 
+          alt="Caroline Barros Nutricionista CRN 23555" 
+          class="header-logo w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
+        >
+      </a>
+
+      <!-- Menu de Navegação Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-textMain/80">
+        <a href="#hero" class="hover:text-olive transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-olive hover:after:w-full after:transition-all">Início</a>
+        <a href="#sobre" class="hover:text-olive transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-olive hover:after:w-full after:transition-all">Quem sou</a>
+        <a href="#servicos" class="hover:text-olive transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-olive hover:after:w-full after:transition-all">Serviços</a>
+        <a href="#depoimentos" class="hover:text-olive transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-olive hover:after:w-full after:transition-all">Depoimentos</a>
+        <a href="#faq" class="hover:text-olive transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-olive hover:after:w-full after:transition-all">Dúvidas</a>
+        <a href="#contato" class="hover:text-olive transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-olive hover:after:w-full after:transition-all">Contato</a>
+      </nav>
+
+      <!-- Botão CTA Header -->
+      <div class="flex items-center gap-4">
+        <button 
+          type="button"
+          class="open-booking-modal inline-flex items-center gap-2 bg-olive text-white px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold shadow-sm hover:bg-olive-dark transition-all duration-300 btn-primary-glow cursor-pointer"
+        >
+          <span>Agendar consulta</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Botão Menu Mobile -->
+        <button class="md:hidden p-2 text-textMain hover:text-olive transition-colors" aria-label="Abrir Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION ANIMADA (GSAP SCROLLTRIGGER & MULTI-LAYER PARALLAX)      -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative min-h-screen pt-28 pb-0 md:pt-36 md:pb-0 flex items-end overflow-hidden hero-gradient">
+
+    <!-- CAMADA 0: BLOBS ORGÂNICOS DE LUZ SUAVE (BACKGROUND) -->
+    <div class="absolute -top-24 right-10 w-96 h-96 bg-olive/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow"></div>
+    <div class="absolute bottom-10 left-1/4 w-[28rem] h-[28rem] bg-[#3a2413]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- CAMADA 1: FOLHAS BOTÂNICAS DESFOCADAS EM PARALLAX PROFUNDO (BACKGROUND) -->
+    <!-- Folha 1 Fundo (Desfocada superior esquerda) -->
+    <div class="hero-leaf hero-leaf-bg1 top-24 left-8 md:left-24 w-16 md:w-24 opacity-40 blur-[1px]">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-olive rotate-45">
+        <path d="M10 90C10 90 20 20 90 10C90 10 90 80 10 90Z" fill="#888020" fill-opacity="0.6" stroke="#645e00" stroke-width="2"/>
+        <path d="M10 90Q50 50 90 10" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <!-- Folha 2 Fundo (Desfocada centro direita) -->
+    <div class="hero-leaf hero-leaf-bg2 top-1/3 right-8 md:right-24 w-16 md:w-24 opacity-35 blur-[2px]">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-olive -rotate-12">
+        <path d="M20 85C20 85 15 25 85 15C85 15 80 80 20 85Z" fill="#888020" fill-opacity="0.55" stroke="#645e00" stroke-width="2"/>
+        <path d="M20 85Q52 50 85 15" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 pb-0">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end">
+
+        <!-- ================= COLUNA ESQUERDA: COPY & CONTEÚDO ================= -->
+        <div class="lg:col-span-7 hero-text-content space-y-6 md:space-y-8 self-center pb-16 lg:pb-28 lg:mb-10">
+          
+          <!-- Headline Editorial de Alto Impacto -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-umber font-semibold leading-[1.18] tracking-tight">
+            <span class="hero-title-line block">Nutrir com ciência,</span>
+            <span class="hero-title-line block">
+              <span class="italic font-normal text-olive">acolher com afeto</span> e
+            </span>
+            <span class="hero-title-line block">transformar sua saúde.</span>
+          </h1>
+
+          <!-- Subheadline acolhedora -->
+          <p class="hero-subtitle text-base sm:text-lg md:text-xl text-textMain/80 font-normal leading-relaxed max-w-xl">
+            Abordagem integrativa e humanizada para mulheres que buscam equilíbrio hormonal, disposição plena e leveza com o espelho — sem dietas restritivas e sem culpa.
+          </p>
+
+          <!-- CTAs Duplos Interativos -->
+          <div class="hero-cta-group flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <!-- Botão Primário -->
+            <button 
+              type="button" 
+              class="open-booking-modal inline-flex items-center justify-center gap-3 bg-olive text-white px-8 py-4 rounded-full text-base font-semibold shadow-lg hover:bg-olive-dark transition-all duration-300 btn-primary-glow group cursor-pointer"
+            >
+              <span>Agendar minha consulta</span>
+              <i data-lucide="calendar" class="w-5 h-5 transition-transform duration-300 group-hover:scale-110"></i>
+            </button>
+
+            <!-- Botão Secundário -->
+            <a 
+              href="#sobre" 
+              class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-medium text-umber border border-umber/20 hover:border-umber hover:bg-linen transition-all duration-300"
+            >
+              <span>Conhecer o método</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-olive"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ================= COLUNA DIREITA: FOTO ESPECIALISTA & PARALLAX 3D (ENCOSTADA NA PARTE INFERIOR) ================= -->
+        <div class="lg:col-span-5 relative flex justify-center items-end self-end mt-4 lg:mt-0 pb-0">
+          
+          <!-- MOLDURA / BASE ORGÂNICA DE FUNDO -->
+          <div class="absolute bottom-0 w-[85%] h-[92%] bg-gradient-to-t from-linen via-olive-light/60 to-transparent rounded-t-[7rem] md:rounded-t-[9rem] rounded-b-none border-t border-x border-umber/5 -z-10 shadow-inner"></div>
+
+          <!-- FOLHA BOTÂNICA 1: SUPERIOR ESQUERDA DA ESPECIALISTA (NITIDA - FLUTUANTE) -->
+          <div class="hero-leaf hero-leaf-top -top-8 -left-6 md:-left-12 w-20 md:w-28 z-30">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full rotate-12">
+              <path d="M15 85C15 85 20 15 85 15C85 15 80 85 15 85Z" fill="#78731d" fill-opacity="0.95" stroke="#5d5700" stroke-width="2"/>
+              <path d="M15 85Q50 50 85 15" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="1.8"/>
+              <path d="M35 65Q50 70 60 75" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1.2"/>
+              <path d="M50 50Q65 52 75 55" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1.2"/>
+            </svg>
+          </div>
+
+
+          <!-- FOLHA BOTÂNICA 3: LATERAL MÉDIA DIREITA -->
+          <div class="hero-leaf hero-leaf-mid top-1/2 -right-8 md:-right-12 w-16 md:w-22 z-10 opacity-90">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-olive rotate-90">
+              <path d="M25 80C25 80 20 25 80 20C80 20 75 75 25 80Z" fill="#888020" fill-opacity="0.8" stroke="#645e00" stroke-width="1.8"/>
+              <path d="M25 80Q52 50 80 20" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1.5"/>
+            </svg>
+          </div>
+
+          <!-- FOTO OFICIAL DA CAROLINE BARROS EM HD (HERO_HD.PNG) -->
+          <div class="hero-photo-wrapper relative z-20 w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[430px] flex justify-center items-end self-end mb-0 pb-0">
+            <img 
+              src="img/Hero_hd.png" 
+              alt="Caroline Barros Nutricionista Clínica e Funcional" 
+              class="hero-photo-img hd-image w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(58,36,19,0.18)] block mb-0 align-bottom"
+            >
+          </div>
+
+          <!-- CARD FLUTUANTE 1: PLANO INDIVIDUALIZADO (ESQUERDA - TRANSPARENTE) -->
+          <div 
+            id="card-float-1" 
+            class="hero-floating-card absolute bottom-24 -left-4 sm:-left-8 z-30 p-3.5 sm:p-4 rounded-2xl shadow-xl flex items-center gap-3.5 hover-lift select-none max-w-[210px] sm:max-w-[240px]"
+          >
+            <div class="w-10 h-10 rounded-xl bg-olive/85 backdrop-blur-sm text-white flex items-center justify-center shrink-0 shadow-sm border border-white/20">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-umber leading-tight">100% Individualizado</p>
+              <p class="text-[11px] text-textMain/80 font-medium leading-tight mt-0.5">Adaptado à sua rotina real</p>
+            </div>
+          </div>
+
+          <!-- CARD FLUTUANTE 2: SUPORTE CONTÍNUO (DIREITA - TRANSPARENTE) -->
+          <div 
+            id="card-float-2" 
+            class="hero-floating-card absolute top-20 -right-2 sm:-right-6 z-30 p-3.5 sm:p-4 rounded-2xl shadow-xl flex items-center gap-3.5 hover-lift select-none max-w-[200px] sm:max-w-[230px]"
+          >
+            <div class="w-10 h-10 rounded-xl bg-[#25D366]/90 backdrop-blur-sm text-white flex items-center justify-center shrink-0 shadow-sm border border-white/20">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.05 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.88 13.59C14.66 13.5 14.5 13.46 14.33 13.71C14.17 13.96 13.7 14.54 13.55 14.71C13.41 14.87 13.26 14.9 13.01 14.77C12.76 14.65 11.97 14.39 11.03 13.55C10.29 12.89 9.79 12.08 9.65 11.83C9.5 11.58 9.63 11.45 9.76 11.32C9.87 11.21 10.01 11.03 10.13 10.89C10.26 10.74 10.3 10.64 10.38 10.47C10.46 10.31 10.42 10.16 10.36 10.04C10.3 9.92 9.8 8.7 9.59 8.2C9.39 7.71 9.18 7.78 9.03 7.77L8.55 7.76C8.38 7.76 8.11 7.82 7.89 8.07C7.66 8.32 7.03 8.91 7.03 10.11C7.03 11.32 7.91 12.48 8.03 12.65C8.16 12.81 9.77 15.29 12.24 16.36C12.83 16.61 13.28 16.76 13.64 16.88C14.23 17.06 14.77 17.04 15.2 16.97C15.68 16.9 16.67 16.37 16.88 15.79C17.08 15.21 17.08 14.71 17.02 14.61C16.96 14.51 16.82 14.45 16.57 14.39Z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-umber leading-tight">Suporte WhatsApp</p>
+              <p class="text-[11px] text-textMain/80 font-medium leading-tight mt-0.5">Acompanhamento próximo</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Indicador de Rolagem Suave (Scroll Down) -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-umber/50 hover:text-olive transition-colors cursor-pointer">
+      <a href="#sobre" class="flex flex-col items-center gap-1 group">
+        <span class="text-[10px] uppercase font-semibold tracking-widest text-umber/60 group-hover:text-olive">Conheça mais</span>
+        <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce text-olive"></i>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3. SEÇÃO QUEM SOU (BIOGRAFIA, CREDENCIAIS E MÉTRICAS DE AUTORIDADE)        -->
+  <!-- ========================================================================= -->
+  <section id="sobre" class="relative py-20 md:py-28 bg-linen border-t border-umber/5 overflow-hidden">
+    
+    <!-- Elemento sutil de fundo -->
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-olive/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Coluna Esquerda: Foto da Especialista no Consultório (sobre_hd.jpg) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <img 
+              src="img/sobre_hd.jpg" 
+              alt="Caroline Barros no consultório de nutrição" 
+              class="hd-image w-full h-auto object-cover transform transition-transform duration-700 hover:scale-105"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-umber/75 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-2 h-2 rounded-full bg-olive-100"></span>
+                <p class="text-xs font-semibold uppercase tracking-wider text-olive-100">Prática Clínica Humanizada</p>
+              </div>
+              <h3 class="text-xl font-serif font-bold">Caroline Barros</h3>
+              <p class="text-xs text-white/85">Nutricionista Clínica & Funcional • CRN 23555</p>
+            </div>
+          </div>
+
+          <!-- Card flutuante sobre a foto: Atendimento humanizado -->
+          <div class="absolute -top-6 -right-4 sm:-right-6 glass-panel px-4 py-3 rounded-2xl shadow-xl border border-umber/10 flex items-center gap-3 hover-lift">
+            <div class="w-9 h-9 rounded-xl bg-olive text-white flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-umber">CRN 23555 Ativa</p>
+              <p class="text-[11px] text-textMain/75">Presencial e Online</p>
+            </div>
+          </div>
+
+          <!-- Elemento decorativo atrás da foto -->
+          <div class="absolute -bottom-6 -right-6 w-full h-full bg-olive/15 rounded-3xl -z-10"></div>
+        </div>
+
+        <!-- Coluna Direita: Biografia, Credenciais e Missão -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-umber/10 text-xs font-semibold text-olive shadow-sm">
+            <i data-lucide="heart" class="w-3.5 h-3.5 fill-olive"></i>
+            <span>Conheça a sua Nutricionista</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-umber font-semibold leading-[1.2]">
+            Mais do que prescrever cardápios, ensino você a <span class="italic font-normal text-olive">viver em paz com a sua alimentação</span>.
+          </h2>
+
+          <p class="text-base sm:text-lg text-textMain/80 leading-relaxed">
+            Olá! Sou a <strong>Caroline Barros</strong>, nutricionista pós-graduada em Nutrição Clínica Funcional e especialista em Saúde da Mulher e Modulação Intestinal. Minha trajetória na nutrição nasceu da certeza de que nenhuma mulher deve viver refém de dietas punitivas, contagem obsessiva de calorias ou culpa ao redor da mesa.
+          </p>
+
+          <p class="text-base sm:text-lg text-textMain/80 leading-relaxed">
+            Cada consulta é um espaço de escuta profunda e acolhimento. Juntas, investigamos a raiz de sintomas como cansaço crônico, inchaço abdominal, alterações hormonais e dificuldade de emagrecimento, construindo uma estratégia alimentar sob medida que respeite a sua rotina real, suas preferências e sua história de vida.
+          </p>
+
+          <!-- Credenciais Clínicas em Pílulas -->
+          <div class="pt-2">
+            <p class="text-xs font-bold uppercase tracking-wider text-umber mb-3">Especializações & Formação:</p>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-umber/10 text-xs text-umber font-medium shadow-sm">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-olive"></i>
+                Pós-Graduação em Nutrição Clínica Funcional
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-umber/10 text-xs text-umber font-medium shadow-sm">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-olive"></i>
+                Especialista em Saúde da Mulher (SOP, TPM, Climatério)
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-umber/10 text-xs text-umber font-medium shadow-sm">
+                <i data-lucide="activity" class="w-3.5 h-3.5 text-olive"></i>
+                Modulação Intestinal & Eixo Intestino-Cérebro
+              </span>
+            </div>
+          </div>
+
+          <!-- 3 Pilares da Metodologia -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-4">
+            <div class="p-4 rounded-2xl bg-white border border-umber/8 shadow-sm hover-lift">
+              <div class="w-9 h-9 rounded-xl bg-olive/15 text-olive flex items-center justify-center mb-2.5">
+                <i data-lucide="dna" class="w-4 h-4"></i>
+              </div>
+              <h4 class="text-sm font-bold text-umber">Bioindividualidade</h4>
+              <p class="text-xs text-textMain/70 mt-1">Seu organismo e seu metabolismo são únicos.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-umber/8 shadow-sm hover-lift">
+              <div class="w-9 h-9 rounded-xl bg-olive/15 text-olive flex items-center justify-center mb-2.5">
+                <i data-lucide="smile" class="w-4 h-4"></i>
+              </div>
+              <h4 class="text-sm font-bold text-umber">Sem Terrorismo</h4>
+              <p class="text-xs text-textMain/70 mt-1">Sem proibições extremas nem efeito rebote.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-umber/8 shadow-sm hover-lift">
+              <div class="w-9 h-9 rounded-xl bg-olive/15 text-olive flex items-center justify-center mb-2.5">
+                <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+              </div>
+              <h4 class="text-sm font-bold text-umber">Visão Integrativa</h4>
+              <p class="text-xs text-textMain/70 mt-1">Sono, estresse, digestão e rotina alinhados.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= BARRA DE MÉTRICAS & AUTORIDADE (GSAP COUNTER) ================= -->
+      <div id="metrics-bar" class="mt-16 md:mt-24 p-8 md:p-12 rounded-3xl bg-white border border-umber/10 shadow-xl grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-umber/10">
+        
+        <!-- Métrica 1 -->
+        <div class="text-center px-4 pt-4 sm:pt-0">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-olive counter-number">
+            +<span class="counter" data-target="1200">0</span>
+          </p>
+          <p class="text-xs sm:text-sm font-bold text-umber mt-1.5 uppercase tracking-wider">Vidas Transformadas</p>
+          <p class="text-[11px] sm:text-xs text-textMain/65 mt-0.5">Pacientes atendidas com sucesso</p>
+        </div>
+
+        <!-- Métrica 2 -->
+        <div class="text-center px-4 pt-4 sm:pt-0">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-umber counter-number">
+            <span class="counter" data-target="8">0</span>+ Anos
+          </p>
+          <p class="text-xs sm:text-sm font-bold text-umber mt-1.5 uppercase tracking-wider">Prática Clínica</p>
+          <p class="text-[11px] sm:text-xs text-textMain/65 mt-0.5">Experiência e estudo contínuo</p>
+        </div>
+
+        <!-- Métrica 3 -->
+        <div class="text-center px-4 pt-4 sm:pt-0">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-olive counter-number">
+            <span class="counter" data-target="98">0</span>%
+          </p>
+          <p class="text-xs sm:text-sm font-bold text-umber mt-1.5 uppercase tracking-wider">Satisfação & Adesão</p>
+          <p class="text-[11px] sm:text-xs text-textMain/65 mt-0.5">Planos que cabem no seu dia a dia</p>
+        </div>
+
+        <!-- Métrica 4 -->
+        <div class="text-center px-4 pt-4 sm:pt-0">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-umber counter-number">
+            <span class="counter" data-target="100">0</span>%
+          </p>
+          <p class="text-xs sm:text-sm font-bold text-umber mt-1.5 uppercase tracking-wider">Individualizado</p>
+          <p class="text-[11px] sm:text-xs text-textMain/65 mt-0.5">Zero receitas de gaveta</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. SEÇÃO SERVIÇOS & FORMATOS DE ATENDIMENTO                               -->
+  <!-- ========================================================================= -->
+  <section id="servicos" class="relative py-20 md:py-28 bg-white border-t border-umber/5 overflow-hidden">
+    
+    <!-- Decoração orgânica suave -->
+    <div class="absolute top-10 right-0 w-80 h-80 bg-olive/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      
+      <!-- Cabeçalho da Seção de Serviços -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-linen border border-umber/10 text-xs font-semibold text-olive shadow-sm">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Formatos de Atendimento</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-umber font-semibold leading-tight">
+          Cuidado individualizado para cada <span class="italic font-normal text-olive">fase da sua jornada</span>.
+        </h2>
+
+        <p class="text-base sm:text-lg text-textMain/80 leading-relaxed">
+          Escolha o acompanhamento ideal para as suas necessidades de saúde. Atendimentos presenciais em Salvador-BA e consultas online com o mesmo padrão de cuidado.
+        </p>
+      </div>
+
+      <!-- Grid com 6 Cards de Serviços -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1: Consulta Individual -->
+        <div class="service-card p-8 rounded-3xl bg-white flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-olive-light text-olive flex items-center justify-center mb-6">
+              <i data-lucide="user-check" class="w-6 h-6"></i>
+            </div>
+
+            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-olive bg-olive-light px-2.5 py-1 rounded-full mb-3">
+              Mais Procurado
+            </span>
+
+            <h3 class="text-xl font-serif font-bold text-umber mb-3">Consulta Individual Personalizada</h3>
+            <p class="text-sm text-textMain/75 leading-relaxed mb-6">
+              Anamnese clínica minuciosa, avaliação de exames laboratoriais, rastreamento metabólico e plano alimentar construído com você.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-textMain/80 pb-6 border-b border-umber/10">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Avaliação antropométrica detalhada</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Plano alimentar ajustado à sua rotina</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Guia prático de receitas e substituições</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6">
+            <button 
+              type="button" 
+              class="open-booking-modal w-full py-3.5 px-4 rounded-full border border-umber/20 text-xs sm:text-sm font-semibold text-umber hover:bg-olive hover:text-white hover:border-olive transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>Agendar Consulta</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 2: Saúde da Mulher & Equilíbrio Hormonal -->
+        <div class="service-card p-8 rounded-3xl bg-white flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-olive-light text-olive flex items-center justify-center mb-6">
+              <i data-lucide="heart" class="w-6 h-6"></i>
+            </div>
+
+            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-umber bg-linen px-2.5 py-1 rounded-full mb-3">
+              Especialidade
+            </span>
+
+            <h3 class="text-xl font-serif font-bold text-umber mb-3">Saúde da Mulher & Hormônios</h3>
+            <p class="text-sm text-textMain/75 leading-relaxed mb-6">
+              Manejo nutricional focado em Síndrome dos Ovários Policísticos (SOP), endometriose, alívio de sintomas de TPM, fertilidade e menopausa.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-textMain/80 pb-6 border-b border-umber/10">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Controle da resistência à insulina na SOP</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Estratégias anti-inflamatórias específicas</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Suplementação individualizada baseada em exames</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6">
+            <button 
+              type="button" 
+              class="open-booking-modal w-full py-3.5 px-4 rounded-full border border-umber/20 text-xs sm:text-sm font-semibold text-umber hover:bg-olive hover:text-white hover:border-olive transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>Agendar Consulta</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 3: Saúde Intestinal & Microbiota (CARD EM DESTAQUE) -->
+        <div class="service-card service-card-featured p-8 rounded-3xl flex flex-col justify-between relative">
+          
+          <div class="absolute -top-3.5 right-6 bg-olive text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
+            Alta Transformação
+          </div>
+
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-olive text-white flex items-center justify-center mb-6 shadow-sm">
+              <i data-lucide="activity" class="w-6 h-6"></i>
+            </div>
+
+            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-olive bg-white px-2.5 py-1 rounded-full mb-3 border border-olive/20">
+              Eixo Intestino-Cérebro
+            </span>
+
+            <h3 class="text-xl font-serif font-bold text-umber mb-3">Saúde Intestinal & Microbiota</h3>
+            <p class="text-sm text-textMain/75 leading-relaxed mb-6">
+              Protocolo para desinflamar o sistema digestivo, aliviar refluxo, gases e distensão, melhorando a imunidade, a absorção e o humor.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-textMain/80 pb-6 border-b border-umber/10">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Mapeamento de intolerâncias e sensibilidades</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Protocolo 5R de modulação intestinal</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Digestão leve e fim da barriga inchada</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6">
+            <button 
+              type="button" 
+              class="open-booking-modal w-full py-3.5 px-4 rounded-full bg-olive text-white text-xs sm:text-sm font-semibold shadow-md hover:bg-olive-dark transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer btn-primary-glow"
+            >
+              <span>Agendar este Tratamento</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 4: Emagrecimento Consciente -->
+        <div class="service-card p-8 rounded-3xl bg-white flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-olive-light text-olive flex items-center justify-center mb-6">
+              <i data-lucide="scale" class="w-6 h-6"></i>
+            </div>
+
+            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-umber bg-linen px-2.5 py-1 rounded-full mb-3">
+              Sem Efeito Sanfona
+            </span>
+
+            <h3 class="text-xl font-serif font-bold text-umber mb-3">Emagrecimento Consciente</h3>
+            <p class="text-sm text-textMain/75 leading-relaxed mb-6">
+              Redução de gordura corporal preservando sua massa muscular, sem fome extrema e sem cortar aquilo que você ama comer no final de semana.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-textMain/80 pb-6 border-b border-umber/10">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Manutenção da saciedade e energia diária</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Autonomia alimentar e inteligência emocional</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Resultados definitivos e duradouros</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6">
+            <button 
+              type="button" 
+              class="open-booking-modal w-full py-3.5 px-4 rounded-full border border-umber/20 text-xs sm:text-sm font-semibold text-umber hover:bg-olive hover:text-white hover:border-olive transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>Agendar Consulta</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 5: Acompanhamento Contínuo VIP -->
+        <div class="service-card p-8 rounded-3xl bg-white flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-olive-light text-olive flex items-center justify-center mb-6">
+              <i data-lucide="messages-square" class="w-6 h-6"></i>
+            </div>
+
+            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-olive bg-olive-light px-2.5 py-1 rounded-full mb-3">
+              Suporte Próximo
+            </span>
+
+            <h3 class="text-xl font-serif font-bold text-umber mb-3">Acompanhamento Contínuo VIP</h3>
+            <p class="text-sm text-textMain/75 leading-relaxed mb-6">
+              Para quem deseja suporte de perto: encontros periódicos, ajustes quinzenais e canal direto no WhatsApp para tirar dúvidas do dia a dia.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-textMain/80 pb-6 border-b border-umber/10">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Contato direto com a Caroline no WhatsApp</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Ajustes no cardápio conforme seus compromissos</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Análise de rótulos e escolhas em restaurantes</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6">
+            <button 
+              type="button" 
+              class="open-booking-modal w-full py-3.5 px-4 rounded-full border border-umber/20 text-xs sm:text-sm font-semibold text-umber hover:bg-olive hover:text-white hover:border-olive transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>Agendar Consulta</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 6: Consulta Online Global -->
+        <div class="service-card p-8 rounded-3xl bg-white flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-olive-light text-olive flex items-center justify-center mb-6">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+
+            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-umber bg-linen px-2.5 py-1 rounded-full mb-3">
+              Sem Fronteiras
+            </span>
+
+            <h3 class="text-xl font-serif font-bold text-umber mb-3">Consulta Online Sem Fronteiras</h3>
+            <p class="text-sm text-textMain/75 leading-relaxed mb-6">
+              Atendimento por vídeo de alta qualidade para brasileiras em qualquer estado ou país, com o mesmo calor humano e rigor técnico do presencial.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-textMain/80 pb-6 border-b border-umber/10">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Flexibilidade de fusos horários</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Plano adaptado a ingredientes locais do seu país</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-olive shrink-0"></i>
+                <span>Acesso ao aplicativo de nutrição integrado</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6">
+            <button 
+              type="button" 
+              class="open-booking-modal w-full py-3.5 px-4 rounded-full border border-umber/20 text-xs sm:text-sm font-semibold text-umber hover:bg-olive hover:text-white hover:border-olive transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>Agendar Consulta</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. SEÇÃO DEPOIMENTOS (INFINITE DUAL MARQUEE: ESQUERDA & DIREITA)         -->
+  <!-- ========================================================================= -->
+  <section id="depoimentos" class="relative py-24 md:py-32 bg-linen border-t border-umber/5 overflow-hidden">
+    
+    <!-- Decoração orgânica suave no fundo -->
+    <div class="absolute -top-24 left-1/3 w-96 h-96 bg-olive/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10 mb-12 md:mb-16">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-umber/10 text-xs font-semibold text-olive shadow-sm">
+          <i data-lucide="message-square-heart" class="w-3.5 h-3.5 fill-olive"></i>
+          <span>Histórias Reais de Pacientes</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-umber font-semibold leading-tight">
+          Resultados que vão além da balança: <span class="italic font-normal text-olive">saúde, autoestima e liberdade</span>.
+        </h2>
+
+        <p class="text-base sm:text-lg text-textMain/80 leading-relaxed">
+          O carinho e a transformação de quem já construiu um estilo de vida sustentável com o nosso acompanhamento. Passe o mouse sobre qualquer depoimento para pausar a leitura.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ÁREA DOS CARROSSEIS BIDIRECIONAIS INFINITOS -->
+    <div class="space-y-6 md:space-y-8 w-full overflow-hidden">
+
+      <!-- ================= TRILHO 1: DESLIZANDO PARA A ESQUERDA ================= -->
+      <div class="marquee-wrapper">
+        <div class="marquee-track-left">
+          
+          <!-- Card 1 -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-olive bg-olive-light px-2.5 py-0.5 rounded-full">
+                  Menos 12kg
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "A Dra. Caroline me ensinou que emagrecer não é passar fome. Depois de anos em efeito sanfona, hoje como de tudo com equilíbrio, meus exames normalizaram e recuperei minha autoestima!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Mariana Vasconcelos" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Mariana Vasconcelos</h4>
+                <p class="text-[11px] text-textMain/60">34 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-umber bg-linen px-2.5 py-0.5 rounded-full">
+                  Controle da SOP
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Cheguei com diagnóstico de SOP e muito inchaço. Com o protocolo anti-inflamatório dela, meus ciclos voltaram a ser regulares em 3 meses e consegui engravidar com muita saúde!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Camila Siqueira" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Camila Siqueira</h4>
+                <p class="text-[11px] text-textMain/60">29 anos • Consulta Online</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-olive bg-olive-light px-2.5 py-0.5 rounded-full">
+                  Saúde Intestinal
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Eu vivia com a barriga estufada e refluxo diário. A modulação intestinal transformou meu sono, minha digestão e minha energia. Nunca mais precisei de remédios para o estômago."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80" alt="Renata Drummond" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Renata Drummond</h4>
+                <p class="text-[11px] text-textMain/60">42 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-umber bg-linen px-2.5 py-0.5 rounded-full">
+                  Atendimento Exterior
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Mesmo morando fora do Brasil, o atendimento online foi perfeito. Ela adaptou todo o cardápio aos alimentos dos supermercados de Portugal. O suporte no WhatsApp é impecável!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Beatriz Nogueira" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Beatriz Nogueira</h4>
+                <p class="text-[11px] text-textMain/60">31 anos • Lisboa, Portugal</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- DUPLICATA DOS CARDS PARA LOOP INFINITO PERFEITO (ESQUERDA) -->
+          <!-- Card 1 Duplicate -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between" aria-hidden="true">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-olive bg-olive-light px-2.5 py-0.5 rounded-full">
+                  Menos 12kg
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "A Dra. Caroline me ensinou que emagrecer não é passar fome. Depois de anos em efeito sanfona, hoje como de tudo com equilíbrio, meus exames normalizaram e recuperei minha autoestima!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Mariana Vasconcelos" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Mariana Vasconcelos</h4>
+                <p class="text-[11px] text-textMain/60">34 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 Duplicate -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between" aria-hidden="true">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-umber bg-linen px-2.5 py-0.5 rounded-full">
+                  Controle da SOP
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Cheguei com diagnóstico de SOP e muito inchaço. Com o protocolo anti-inflamatório dela, meus ciclos voltaram a ser regulares em 3 meses e consegui engravidar com muita saúde!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Camila Siqueira" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Camila Siqueira</h4>
+                <p class="text-[11px] text-textMain/60">29 anos • Consulta Online</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 Duplicate -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between" aria-hidden="true">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-olive bg-olive-light px-2.5 py-0.5 rounded-full">
+                  Saúde Intestinal
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Eu vivia com a barriga estufada e refluxo diário. A modulação intestinal transformou meu sono, minha digestão e minha energia. Nunca mais precisei de remédios para o estômago."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80" alt="Renata Drummond" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Renata Drummond</h4>
+                <p class="text-[11px] text-textMain/60">42 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 Duplicate -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between" aria-hidden="true">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-umber bg-linen px-2.5 py-0.5 rounded-full">
+                  Atendimento Exterior
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Mesmo morando fora do Brasil, o atendimento online foi perfeito. Ela adaptou todo o cardápio aos alimentos dos supermercados de Portugal. O suporte no WhatsApp é impecável!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Beatriz Nogueira" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Beatriz Nogueira</h4>
+                <p class="text-[11px] text-textMain/60">31 anos • Lisboa, Portugal</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= TRILHO 2: DESLIZANDO PARA A DIREITA ================= -->
+      <div class="marquee-wrapper">
+        <div class="marquee-track-right">
+          
+          <!-- Card 5 -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-olive bg-olive-light px-2.5 py-0.5 rounded-full">
+                  Disposição Plena
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Eu acordava cansada e dependia de litros de café para render. Hoje tenho uma disposição que não sentia há 10 anos, e até meu humor e concentração no trabalho mudaram!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=120&q=80" alt="Juliana Mendes" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Juliana Mendes</h4>
+                <p class="text-[11px] text-textMain/60">38 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-umber bg-linen px-2.5 py-0.5 rounded-full">
+                  Alívio no Climatério
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "As ondas de calor e a insônia da pré-menopausa estavam tirando minha paz. Os ajustes alimentares e os fitoterápicos certos devolveram minha noite de sono e minha vitalidade."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=120&q=80" alt="Fernanda Alencar" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Fernanda Alencar</h4>
+                <p class="text-[11px] text-textMain/60">45 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-olive bg-olive-light px-2.5 py-0.5 rounded-full">
+                  Paz com a Comida
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Eu tinha crises de compulsão e culpa aos fins de semana. O olhar humanizado da Caroline me libertou. Hoje sei fazer escolhas conscientes sem medo de confraternizar."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Larissa Castro" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Larissa Castro</h4>
+                <p class="text-[11px] text-textMain/60">27 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-umber bg-linen px-2.5 py-0.5 rounded-full">
+                  Rotina Real
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Com dois filhos e rotina corporativa, achava impossível seguir dieta. A Caroline montou opções práticas que levo pro trabalho sem estresse. Menos 9kg com muita leveza!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=120&q=80" alt="Patricia Gomes" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Patricia Gomes</h4>
+                <p class="text-[11px] text-textMain/60">36 anos • Consulta Online</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- DUPLICATA DOS CARDS PARA LOOP INFINITO PERFEITO (DIREITA) -->
+          <!-- Card 5 Duplicate -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between" aria-hidden="true">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-olive bg-olive-light px-2.5 py-0.5 rounded-full">
+                  Disposição Plena
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Eu acordava cansada e dependia de litros de café para render. Hoje tenho uma disposição que não sentia há 10 anos, e até meu humor e concentração no trabalho mudaram!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=120&q=80" alt="Juliana Mendes" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Juliana Mendes</h4>
+                <p class="text-[11px] text-textMain/60">38 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 Duplicate -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between" aria-hidden="true">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-umber bg-linen px-2.5 py-0.5 rounded-full">
+                  Alívio no Climatério
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "As ondas de calor e a insônia da pré-menopausa estavam tirando minha paz. Os ajustes alimentares e os fitoterápicos certos devolveram minha noite de sono e minha vitalidade."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=120&q=80" alt="Fernanda Alencar" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Fernanda Alencar</h4>
+                <p class="text-[11px] text-textMain/60">45 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 Duplicate -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between" aria-hidden="true">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-olive bg-olive-light px-2.5 py-0.5 rounded-full">
+                  Paz com a Comida
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Eu tinha crises de compulsão e culpa aos fins de semana. O olhar humanizado da Caroline me libertou. Hoje sei fazer escolhas conscientes sem medo de confraternizar."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Larissa Castro" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Larissa Castro</h4>
+                <p class="text-[11px] text-textMain/60">27 anos • Salvador-BA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 Duplicate -->
+          <div class="testimonial-card p-6 rounded-3xl bg-white border border-umber/8 shadow-md flex flex-col justify-between" aria-hidden="true">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-[#eab308]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-umber bg-linen px-2.5 py-0.5 rounded-full">
+                  Rotina Real
+                </span>
+              </div>
+              <p class="text-sm text-textMain/85 leading-relaxed italic mb-5">
+                "Com dois filhos e rotina corporativa, achava impossível seguir dieta. A Caroline montou opções práticas que levo pro trabalho sem estresse. Menos 9kg com muita leveza!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-umber/8">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=120&q=80" alt="Patricia Gomes" class="w-11 h-11 rounded-full object-cover border-2 border-olive/30 shadow-sm">
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-umber">Patricia Gomes</h4>
+                <p class="text-[11px] text-textMain/60">36 anos • Consulta Online</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Call to action suave abaixo dos depoimentos -->
+    <div class="mt-12 md:mt-16 text-center px-6">
+      <button 
+        type="button" 
+        class="open-booking-modal inline-flex items-center gap-2.5 bg-olive text-white px-8 py-4 rounded-full text-sm font-semibold shadow-lg hover:bg-olive-dark transition-all duration-300 btn-primary-glow cursor-pointer"
+      >
+        <span>Quero transformar minha saúde também</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. SEÇÃO DÚVIDAS FREQUENTES (FAQ ACCORDION INTERATIVO)                    -->
+  <!-- ========================================================================= -->
+  <section id="faq" class="relative py-24 md:py-32 bg-white border-t border-umber/5 overflow-hidden">
+    
+    <div class="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
+      
+      <!-- Cabeçalho FAQ -->
+      <div class="text-center space-y-4 mb-14 md:mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-linen border border-umber/10 text-xs font-semibold text-olive shadow-sm">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Perguntas Frequentes</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-umber font-semibold leading-tight">
+          Tudo o que você precisa saber sobre <span class="italic font-normal text-olive">a sua consulta</span>.
+        </h2>
+
+        <p class="text-base sm:text-lg text-textMain/80 leading-relaxed max-w-2xl mx-auto">
+          Transparência, acolhimento e clareza desde o primeiro contato. Se sua dúvida não estiver aqui, nossa equipe está disponível no WhatsApp.
+        </p>
+      </div>
+
+      <!-- Lista de Accordions -->
+      <div class="space-y-4">
+        
+        <!-- Pergunta 1 (Aberta por padrão) -->
+        <div class="faq-item active rounded-2xl bg-linen/50 border border-umber/10 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="text-base sm:text-lg font-serif font-semibold text-umber">
+              Como funciona a primeira consulta nutricional?
+            </span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-white text-umber flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </button>
+          <div class="faq-answer px-6 pb-6 text-sm sm:text-base text-textMain/80 leading-relaxed border-t border-umber/5 pt-4">
+            A primeira consulta tem duração média de 1h a 1h20. Realizamos uma anamnese aprofundada da sua história clínica, histórico de dietas, exames de sangue recentes, qualidade do sono, digestão, nível de estresse e rotina diária. A partir dessa análise integrativa, desenhamos juntos as metas e o plano alimentar sob medida.
+          </div>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="faq-item rounded-2xl bg-linen/50 border border-umber/10 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="text-base sm:text-lg font-serif font-semibold text-umber">
+              As consultas são presenciais ou online?
+            </span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-white text-umber flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </button>
+          <div class="faq-answer px-6 pb-6 text-sm sm:text-base text-textMain/80 leading-relaxed border-t border-umber/5 pt-4">
+            Ambas as modalidades estão disponíveis! O atendimento presencial acontece no consultório em Salvador-BA, com bioimpedância e avaliação física completa. O atendimento online é realizado por vídeo-chamada para pacientes do Brasil inteiro e do exterior, com a mesma profundidade técnica e calor humano.
+          </div>
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="faq-item rounded-2xl bg-linen/50 border border-umber/10 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="text-base sm:text-lg font-serif font-semibold text-umber">
+              O plano alimentar é entregue na hora?
+            </span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-white text-umber flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </button>
+          <div class="faq-answer px-6 pb-6 text-sm sm:text-base text-textMain/80 leading-relaxed border-t border-umber/5 pt-4">
+            Não prescrevemos dietas genéricas prontas. Durante a consulta alinhamos a estrutura principal e as primeiras orientações práticas. O plano completo e detalhado (com receitas, lista de compras e suplementação orientada) é entregue em até 3 dias úteis pelo aplicativo exclusivo, elaborado individualmente para você.
+          </div>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="faq-item rounded-2xl bg-linen/50 border border-umber/10 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="text-base sm:text-lg font-serif font-semibold text-umber">
+              Você atende convênios ou emite recibo para reembolso?
+            </span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-white text-umber flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </button>
+          <div class="faq-answer px-6 pb-6 text-sm sm:text-base text-textMain/80 leading-relaxed border-t border-umber/5 pt-4">
+            Os atendimentos são particulares para garantir consultas longas e personalizadas. No entanto, emitimos recibo e relatório com todas as informações clínicas e número de registro (CRN 23555) para que você solicite o reembolso junto ao seu plano de saúde (a maioria dos planos oferece cobertura para nutrição).
+          </div>
+        </div>
+
+        <!-- Pergunta 5 -->
+        <div class="faq-item rounded-2xl bg-linen/50 border border-umber/10 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="text-base sm:text-lg font-serif font-semibold text-umber">
+              Como funciona o acompanhamento entre as consultas?
+            </span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-white text-umber flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </button>
+          <div class="faq-answer px-6 pb-6 text-sm sm:text-base text-textMain/80 leading-relaxed border-t border-umber/5 pt-4">
+            Você não fica desamparada após sair da consulta! Todas as pacientes têm acesso a um canal direto de WhatsApp para tirar dúvidas sobre substituições, rótulos de alimentos e imprevistos do dia a dia, garantindo motivação e segurança contínua durante todo o processo.
+          </div>
+        </div>
+
+        <!-- Pergunta 6 -->
+        <div class="faq-item rounded-2xl bg-linen/50 border border-umber/10 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="text-base sm:text-lg font-serif font-semibold text-umber">
+              Tenho uma rotina muito corrida e não sei cozinhar. O método funciona para mim?
+            </span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-white text-umber flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </button>
+          <div class="faq-answer px-6 pb-6 text-sm sm:text-base text-textMain/80 leading-relaxed border-t border-umber/5 pt-4">
+            Com certeza! Esse é justamente um dos maiores diferenciais da abordagem humanizada: adaptamos a nutrição à sua vida, e não o oposto. Criamos estratégias com preparações rápidas, marmitas práticas, opções para comer fora e alimentos de fácil acesso.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Box de Dúvida Adicional com WhatsApp -->
+      <div class="mt-12 p-6 rounded-2xl bg-linen border border-umber/10 text-center space-y-3">
+        <p class="text-sm font-semibold text-umber">Ainda tem alguma dúvida sobre a consulta?</p>
+        <a 
+          href="https://wa.me/5571999999999?text=Olá,%20Dra.%20Caroline!%20Tenho%20uma%20dúvida%20sobre%20as%20consultas." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2.5 text-sm font-bold text-[#20bd5a] hover:text-[#189b48] transition-colors"
+        >
+          <span class="w-6 h-6 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0 shadow-sm">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.05 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.88 13.59C14.66 13.5 14.5 13.46 14.33 13.71C14.17 13.96 13.7 14.54 13.55 14.71C13.41 14.87 13.26 14.9 13.01 14.77C12.76 14.65 11.97 14.39 11.03 13.55C10.29 12.89 9.79 12.08 9.65 11.83C9.5 11.58 9.63 11.45 9.76 11.32C9.87 11.21 10.01 11.03 10.13 10.89C10.26 10.74 10.3 10.64 10.38 10.47C10.46 10.31 10.42 10.16 10.36 10.04C10.3 9.92 9.8 8.7 9.59 8.2C9.39 7.71 9.18 7.78 9.03 7.77L8.55 7.76C8.38 7.76 8.11 7.82 7.89 8.07C7.66 8.32 7.03 8.91 7.03 10.11C7.03 11.32 7.91 12.48 8.03 12.65C8.16 12.81 9.77 15.29 12.24 16.36C12.83 16.61 13.28 16.76 13.64 16.88C14.23 17.06 14.77 17.04 15.2 16.97C15.68 16.9 16.67 16.37 16.88 15.79C17.08 15.21 17.08 14.71 17.02 14.61C16.96 14.51 16.82 14.45 16.57 14.39Z"/>
+            </svg>
+          </span>
+          <span>Converse diretamente com nossa equipe no WhatsApp</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-[#20bd5a]"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. SEÇÃO CONTATO & CTA FINAL (INSPIRADA NA REFERÊNCIA COM FOLHAS FLUTUANTES) -->
+  <!-- ========================================================================= -->
+  <section id="contato" class="relative py-24 md:py-36 bg-linen border-t border-umber/5 overflow-hidden">
+    
+    <!-- Elementos orgânicos de iluminação de fundo -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[42rem] h-[42rem] bg-olive/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- FOLHAS BOTÂNICAS FLUTUANTES (IDÊNTICAS À REFERÊNCIA ENVIADA PELO USUÁRIO) -->
+    
+    <!-- Folha 1: Superior Direita (Grande, inclinada para dentro) -->
+    <div class="cta-leaf cta-leaf-top absolute top-10 right-4 md:right-16 lg:right-24 w-28 md:w-40 lg:w-48 select-none">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-olive rotate-[30deg]">
+        <path d="M15 90C15 90 20 10 90 10C90 10 85 85 15 90Z" fill="#78731d" fill-opacity="0.9" stroke="#5d5700" stroke-width="2"/>
+        <path d="M15 90Q52 50 90 10" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="2"/>
+        <path d="M35 70Q50 72 65 76" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+        <path d="M50 52Q68 55 80 58" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+      </svg>
+    </div>
+
+    <!-- Folha 2: Lateral Esquerda Superior (Desfocada com profundidade de campo) -->
+    <div class="cta-leaf cta-leaf-left absolute top-20 left-4 md:left-12 lg:left-20 w-20 md:w-28 opacity-80 blur-[1px] select-none">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-olive -rotate-45">
+        <path d="M20 85C20 85 15 20 85 15C85 15 80 80 20 85Z" fill="#888020" fill-opacity="0.85" stroke="#645e00" stroke-width="1.5"/>
+        <path d="M20 85Q52 50 85 15" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <!-- Folha 3: Lateral Inferior Direita -->
+    <div class="cta-leaf cta-leaf-right absolute bottom-12 right-6 md:right-28 w-16 md:w-24 select-none opacity-75">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-olive rotate-12">
+        <path d="M25 80C25 80 20 25 80 20C80 20 75 75 25 80Z" fill="#888020" fill-opacity="0.75" stroke="#645e00" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <!-- CONTAINER DO GRANDE CARD CENTRAL (REFERÊNCIA DO USUÁRIO) -->
+    <div class="max-w-5xl mx-auto px-6 md:px-12 relative z-20">
+      
+      <!-- Overline centralizado acima do card -->
+      <div class="text-center mb-6">
+        <p class="text-xs uppercase tracking-widest font-semibold text-olive">
+          Como escolher os melhores alimentos e transformar sua vida
+        </p>
+      </div>
+
+      <!-- Card Box Principal -->
+      <div class="cta-card-box rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden pt-8 sm:pt-10 md:pt-12 lg:pt-14 px-6 sm:px-10 md:px-12 lg:px-16 pb-0">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-end">
+          
+          <!-- Coluna Esquerda: Foto Recortada Caroline Barros estendendo a mão (CTA_hd.png) encostada na parte inferior -->
+          <div class="md:col-span-5 flex justify-center items-end self-end relative order-2 md:order-1 mb-0 pb-0">
+            <div class="relative w-full max-w-[290px] sm:max-w-[340px] md:max-w-[380px] flex justify-center items-end self-end mb-0 pb-0">
+              <!-- Sombra orgânica e suave no chão -->
+              <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-8 bg-umber/20 rounded-full blur-xl pointer-events-none"></div>
+              
+              <!-- Foto oficial de CTA em HD encostada na borda inferior -->
+              <img 
+                src="img/CTA_hd.png" 
+                alt="Caroline Barros estendendo a mão convidando para agendamento" 
+                class="hd-image relative z-10 w-full h-auto object-contain block mb-0 align-bottom drop-shadow-[0_20px_30px_rgba(58,36,19,0.2)] transform hover:scale-[1.02] transition-transform duration-500"
+              >
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Copy Persuasiva, Acolhedora e Botão -->
+          <div class="md:col-span-7 space-y-6 order-1 md:order-2 py-8 sm:py-10 md:py-12 lg:py-14">
+            
+            <h3 class="text-3xl sm:text-4xl lg:text-4xl font-serif text-umber font-bold leading-tight">
+              Quem irá te guiar nessa jornada?
+            </h3>
+
+            <p class="text-sm sm:text-base text-textMain/85 leading-relaxed">
+              Meu nome é <strong>Caroline Barros</strong> e há mais de 8 anos venho ajudando mulheres a transformarem a sua alimentação de maneira simples, científica e descomplicada.
+            </p>
+
+            <p class="text-sm sm:text-base text-textMain/85 leading-relaxed">
+              Minha missão é guiar você rumo à sua melhor versão através de um olhar integral sobre seu metabolismo, sua mente e seu estilo de vida — sem proibições radicais e com muito acolhimento.
+            </p>
+
+            <!-- Botão de Ação Imediata com Gradiente e Glow -->
+            <div class="pt-2">
+              <button 
+                type="button" 
+                class="open-booking-modal inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-olive to-[#736c1b] text-white font-bold text-base shadow-xl hover:shadow-olive/40 hover:scale-[1.02] transition-all duration-300 btn-primary-glow cursor-pointer"
+              >
+                <span>Quero me consultar com a Caroline</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </button>
+            </div>
+
+            <!-- Mini Credenciais de Apoio -->
+            <div class="pt-4 flex flex-wrap items-center gap-4 text-xs text-textMain/70 border-t border-umber/10">
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-olive"></i>
+                <span>CRN 23555 Ativa</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-olive"></i>
+                <span>Salvador-BA & Online Global</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. FOOTER INSTITUCIONAL COMPLETO                                         -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-umber/10 pt-16 pb-12 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-umber/10">
+        
+        <!-- Coluna 1: Logo & Missão -->
+        <div class="lg:col-span-4 space-y-4">
+          <a href="#hero" class="inline-block" aria-label="Voltar ao início">
+            <img src="img/logo_clean.png" alt="Caroline Barros Nutricionista" class="h-16 w-auto object-contain">
+          </a>
+          <p class="text-xs sm:text-sm text-textMain/75 leading-relaxed max-w-sm">
+            Nutrição clínica, funcional e comportamental. Promovendo saúde duradoura, equilíbrio hormonal e leveza à mesa com rigor científico e empatia.
+          </p>
+          <div class="pt-2 text-xs font-semibold text-umber/80">
+            <span>Dra. Caroline Barros • CRN 23555 - 5ª Região</span>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação Rápida -->
+        <div class="lg:col-span-3 space-y-3">
+          <p class="text-xs font-bold uppercase tracking-wider text-umber">Navegação Rápida</p>
+          <ul class="space-y-2 text-xs sm:text-sm text-textMain/75">
+            <li><a href="#hero" class="hover:text-olive transition-colors">Início</a></li>
+            <li><a href="#sobre" class="hover:text-olive transition-colors">Quem sou eu</a></li>
+            <li><a href="#servicos" class="hover:text-olive transition-colors">Formatos de Atendimento</a></li>
+            <li><a href="#depoimentos" class="hover:text-olive transition-colors">Histórias de Pacientes</a></li>
+            <li><a href="#faq" class="hover:text-olive transition-colors">Dúvidas Frequentes</a></li>
+            <li><a href="#contato" class="hover:text-olive transition-colors">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Especialidades -->
+        <div class="lg:col-span-2 space-y-3">
+          <p class="text-xs font-bold uppercase tracking-wider text-umber">Especialidades</p>
+          <ul class="space-y-2 text-xs sm:text-sm text-textMain/75">
+            <li>Saúde da Mulher & SOP</li>
+            <li>Modulação Intestinal</li>
+            <li>Emagrecimento Consciente</li>
+            <li>Climatério & Menopausa</li>
+            <li>Consulta Online Global</li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Contato & Atendimento -->
+        <div class="lg:col-span-3 space-y-4">
+          <p class="text-xs font-bold uppercase tracking-wider text-umber">Atendimento & Contato</p>
+          <div class="space-y-2.5 text-xs sm:text-sm text-textMain/80">
+            <p class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-olive shrink-0"></i>
+              <span>Salvador-BA (Consultório) e Vídeo Online</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-olive shrink-0"></i>
+              <span>(71) 99999-9999 (WhatsApp)</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-olive shrink-0"></i>
+              <span>contato@carolinebarros.com.br</span>
+            </p>
+          </div>
+
+          <!-- Redes Sociais Oficiais com Cores e Logotipos Originais -->
+          <div class="pt-2">
+            <p class="text-[11px] font-semibold text-umber/70 uppercase tracking-wider mb-2.5">Acompanhe nas Redes</p>
+            <div class="flex items-center gap-2.5">
+              <!-- WhatsApp Oficial -->
+              <a 
+                href="https://wa.me/5571999999999" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="brand-btn-social brand-btn-whatsapp"
+                aria-label="WhatsApp Oficial"
+                title="WhatsApp Oficial"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.05 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.88 13.59C14.66 13.5 14.5 13.46 14.33 13.71C14.17 13.96 13.7 14.54 13.55 14.71C13.41 14.87 13.26 14.9 13.01 14.77C12.76 14.65 11.97 14.39 11.03 13.55C10.29 12.89 9.79 12.08 9.65 11.83C9.5 11.58 9.63 11.45 9.76 11.32C9.87 11.21 10.01 11.03 10.13 10.89C10.26 10.74 10.3 10.64 10.38 10.47C10.46 10.31 10.42 10.16 10.36 10.04C10.3 9.92 9.8 8.7 9.59 8.2C9.39 7.71 9.18 7.78 9.03 7.77L8.55 7.76C8.38 7.76 8.11 7.82 7.89 8.07C7.66 8.32 7.03 8.91 7.03 10.11C7.03 11.32 7.91 12.48 8.03 12.65C8.16 12.81 9.77 15.29 12.24 16.36C12.83 16.61 13.28 16.76 13.64 16.88C14.23 17.06 14.77 17.04 15.2 16.97C15.68 16.9 16.67 16.37 16.88 15.79C17.08 15.21 17.08 14.71 17.02 14.61C16.96 14.51 16.82 14.45 16.57 14.39Z"/>
+                </svg>
+              </a>
+
+              <!-- Instagram Oficial -->
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="brand-btn-social brand-btn-instagram"
+                aria-label="Instagram Oficial"
+                title="Instagram Oficial"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+
+              <!-- YouTube Oficial -->
+              <a 
+                href="https://youtube.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="brand-btn-social brand-btn-youtube"
+                aria-label="YouTube Oficial"
+                title="YouTube Oficial"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+
+              <!-- Facebook Oficial -->
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="brand-btn-social brand-btn-facebook"
+                aria-label="Facebook Oficial"
+                title="Facebook Oficial"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+
+              <!-- TikTok Oficial -->
+              <a 
+                href="https://tiktok.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="brand-btn-social brand-btn-tiktok"
+                aria-label="TikTok Oficial"
+                title="TikTok Oficial"
+              >
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.18 2.09 2.34 2.33.82.17 1.69.04 2.42-.35.83-.43 1.4-1.22 1.6-2.12.11-.6.12-1.22.12-1.83V.02z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior de Copyright e Ética -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-textMain/60">
+        <p>© 2026 Caroline Barros Nutricionista • Todos os direitos reservados.</p>
+        <p class="text-center sm:text-right">Desenvolvido com excelência • Em conformidade com as normas do CFN/CRN.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 4. BOTÃO FLUTUANTE DE WHATSAPP (CANTO INFERIOR DIREITO)                  -->
+  <!-- ========================================================================= -->
+  <a 
+    href="https://wa.me/5571999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20nutricionista%20Caroline%20Barros!" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-2xl hover:scale-105 hover:bg-[#20bd5a] transition-all duration-300 group"
+    aria-label="Falar no WhatsApp"
+  >
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.05 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.88 13.59C14.66 13.5 14.5 13.46 14.33 13.71C14.17 13.96 13.7 14.54 13.55 14.71C13.41 14.87 13.26 14.9 13.01 14.77C12.76 14.65 11.97 14.39 11.03 13.55C10.29 12.89 9.79 12.08 9.65 11.83C9.5 11.58 9.63 11.45 9.76 11.32C9.87 11.21 10.01 11.03 10.13 10.89C10.26 10.74 10.3 10.64 10.38 10.47C10.46 10.31 10.42 10.16 10.36 10.04C10.3 9.92 9.8 8.7 9.59 8.2C9.39 7.71 9.18 7.78 9.03 7.77L8.55 7.76C8.38 7.76 8.11 7.82 7.89 8.07C7.66 8.32 7.03 8.91 7.03 10.11C7.03 11.32 7.91 12.48 8.03 12.65C8.16 12.81 9.77 15.29 12.24 16.36C12.83 16.61 13.28 16.76 13.64 16.88C14.23 17.06 14.77 17.04 15.2 16.97C15.68 16.9 16.67 16.37 16.88 15.79C17.08 15.21 17.08 14.71 17.02 14.61C16.96 14.51 16.82 14.45 16.57 14.39Z"/>
+    </svg>
+    <span class="hidden md:inline text-sm font-semibold pr-1">Falar com a Nutri</span>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- 5. MODAL DO SISTEMA DE AGENDAMENTO INTERATIVO                             -->
+  <!-- ========================================================================= -->
+  <div 
+    id="booking-modal" 
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-umber/40 backdrop-blur-sm hidden-modal overflow-y-auto"
+    aria-labelledby="booking-modal-title" 
+    role="dialog" 
+    aria-modal="true"
+  >
+    <div 
+      id="booking-modal-dialog" 
+      class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-umber/10 overflow-hidden my-8"
+    >
+      <!-- Top Bar com Foto, Título e Botão Fechar -->
+      <div class="px-6 py-5 bg-linen border-b border-umber/8 flex items-center justify-between">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-olive/30 shadow-sm shrink-0 bg-white">
+            <img src="img/Hero_hd.png" alt="Caroline Barros" class="hd-image w-full h-full object-cover object-top scale-125 pt-1">
+          </div>
+          <div>
+            <h3 id="booking-modal-title" class="text-base sm:text-lg font-serif font-bold text-umber">Agendamento de Consulta</h3>
+            <p class="text-xs text-textMain/75">Dra. Caroline Barros • <span class="font-semibold text-olive">CRN 23555</span></p>
+          </div>
+        </div>
+
+        <button 
+          type="button" 
+          class="close-booking-modal w-9 h-9 rounded-full bg-white text-umber/70 hover:text-umber hover:bg-umber/10 border border-umber/10 flex items-center justify-center transition-colors cursor-pointer"
+          aria-label="Fechar modal"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Conteúdo do Formulário / Passos -->
+      <form id="booking-form" class="p-6 md:p-8 space-y-6 max-h-[80vh] overflow-y-auto">
+        
+        <!-- 1. Escolha da Modalidade -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-umber mb-2.5">
+            1. Escolha a Modalidade de Atendimento
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="relative flex items-center gap-3 p-3.5 rounded-2xl border border-umber/15 bg-linen/50 cursor-pointer hover:border-olive transition-colors has-[:checked]:border-olive has-[:checked]:bg-olive-light/60">
+              <input type="radio" name="booking-modality" value="Online (Vídeo-chamada)" checked class="text-olive focus:ring-olive w-4 h-4">
+              <div>
+                <span class="block text-xs sm:text-sm font-bold text-umber">Online (Vídeo-chamada)</span>
+                <span class="block text-[11px] text-textMain/70">Atendimento global no conforto do seu lar</span>
+              </div>
+            </label>
+
+            <label class="relative flex items-center gap-3 p-3.5 rounded-2xl border border-umber/15 bg-linen/50 cursor-pointer hover:border-olive transition-colors has-[:checked]:border-olive has-[:checked]:bg-olive-light/60">
+              <input type="radio" name="booking-modality" value="Presencial (Consultório Salvador)" class="text-olive focus:ring-olive w-4 h-4">
+              <div>
+                <span class="block text-xs sm:text-sm font-bold text-umber">Presencial (Consultório)</span>
+                <span class="block text-[11px] text-textMain/70">Espaço acolhedor em Salvador-BA</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 2. Escolha do Dia / Data -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="block text-xs font-bold uppercase tracking-wider text-umber">
+              2. Escolha o Dia da Consulta
+            </label>
+            <span class="text-[11px] text-olive font-medium flex items-center gap-1">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              Próximos dias disponíveis
+            </span>
+          </div>
+
+          <!-- Carrossel de Dias Rápidos -->
+          <div id="booking-days-container" class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+            <!-- Gerado via JavaScript dinamicamente com os próximos dias úteis -->
+          </div>
+
+          <!-- Seletor de Data alternativo para qualquer dia futuro -->
+          <div class="mt-2.5 flex items-center gap-2">
+            <label for="booking-date-input" class="text-xs text-textMain/70 font-medium">Ou selecione uma data específica:</label>
+            <input 
+              type="date" 
+              id="booking-date-input" 
+              class="text-xs px-3 py-1.5 rounded-xl border border-umber/20 text-umber focus:outline-none focus:border-olive focus:ring-1 focus:ring-olive"
+            >
+          </div>
+        </div>
+
+        <!-- 3. Escolha do Horário -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-umber mb-2.5">
+            3. Selecione o Horário Preferido
+          </label>
+          <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-2">
+            <button type="button" class="time-slot-btn px-2 py-2 rounded-xl border border-umber/15 text-xs font-bold text-umber" data-time="08:30">08:30</button>
+            <button type="button" class="time-slot-btn px-2 py-2 rounded-xl border border-umber/15 text-xs font-bold text-umber" data-time="09:45">09:45</button>
+            <button type="button" class="time-slot-btn px-2 py-2 rounded-xl border border-umber/15 text-xs font-bold text-umber" data-time="11:00">11:00</button>
+            <button type="button" class="time-slot-btn selected px-2 py-2 rounded-xl border border-umber/15 text-xs font-bold text-umber" data-time="14:00">14:00</button>
+            <button type="button" class="time-slot-btn px-2 py-2 rounded-xl border border-umber/15 text-xs font-bold text-umber" data-time="15:15">15:15</button>
+            <button type="button" class="time-slot-btn px-2 py-2 rounded-xl border border-umber/15 text-xs font-bold text-umber" data-time="16:30">16:30</button>
+            <button type="button" class="time-slot-btn px-2 py-2 rounded-xl border border-umber/15 text-xs font-bold text-umber" data-time="17:45">17:45</button>
+          </div>
+        </div>
+
+        <!-- 4. Seus Dados de Contato -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-umber mb-2.5">
+            4. Seus Dados para Confirmação
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div>
+              <label for="booking-name" class="block text-xs font-medium text-textMain/80 mb-1">Seu Nome Completo *</label>
+              <input 
+                type="text" 
+                id="booking-name" 
+                placeholder="Ex: Mariana Silva" 
+                required
+                class="w-full px-4 py-2.5 rounded-xl border border-umber/20 text-sm focus:outline-none focus:border-olive focus:ring-2 focus:ring-olive/20"
+              >
+            </div>
+
+            <div>
+              <label for="booking-phone" class="block text-xs font-medium text-textMain/80 mb-1">Seu WhatsApp com DDD *</label>
+              <input 
+                type="tel" 
+                id="booking-phone" 
+                placeholder="(71) 99999-9999" 
+                required
+                class="w-full px-4 py-2.5 rounded-xl border border-umber/20 text-sm focus:outline-none focus:border-olive focus:ring-2 focus:ring-olive/20"
+              >
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="booking-goal" class="block text-xs font-medium text-textMain/80 mb-1">Qual seu principal objetivo com a nutrição?</label>
+              <select 
+                id="booking-goal" 
+                class="w-full px-4 py-2.5 rounded-xl border border-umber/20 text-sm bg-white focus:outline-none focus:border-olive focus:ring-2 focus:ring-olive/20 text-textMain"
+              >
+                <option value="Emagrecimento Saudável & Composição Corporal">Emagrecimento Saudável & Composição Corporal</option>
+                <option value="Saúde da Mulher (SOP, TPM, Menopausa, Fertilidade)">Saúde da Mulher (SOP, TPM, Menopausa, Fertilidade)</option>
+                <option value="Saúde Intestinal, Digestão & Microbiota">Saúde Intestinal, Digestão & Microbiota</option>
+                <option value="Mais Energia, Disposição & Performance Diária">Mais Energia, Disposição & Performance Diária</option>
+                <option value="Reeducação Alimentar e Relação com a Comida">Reeducação Alimentar e Relação com a Comida</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Card de Resumo do Agendamento ao Vivo -->
+        <div class="p-4 rounded-2xl bg-linen border border-umber/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-olive/15 text-olive flex items-center justify-center shrink-0">
+              <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-[11px] font-semibold text-textMain/70 uppercase tracking-wider">Resumo do Horário Selecionado</p>
+              <p id="booking-summary-text" class="text-xs sm:text-sm font-medium text-umber">
+                <!-- Preenchido via JavaScript dinamicamente -->
+              </p>
+            </div>
+          </div>
+          <span class="text-[10px] text-olive font-bold bg-olive-light px-2.5 py-1 rounded-full shrink-0">Vagas Limitadas</span>
+        </div>
+
+        <!-- Botão de Ação Final (Confirmação WhatsApp) -->
+        <div class="pt-2">
+          <button 
+            type="button" 
+            id="btn-confirm-booking"
+            class="w-full py-4 px-6 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-base shadow-xl flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.01] cursor-pointer"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.05 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.88 13.59C14.66 13.5 14.5 13.46 14.33 13.71C14.17 13.96 13.7 14.54 13.55 14.71C13.41 14.87 13.26 14.9 13.01 14.77C12.76 14.65 11.97 14.39 11.03 13.55C10.29 12.89 9.79 12.08 9.65 11.83C9.5 11.58 9.63 11.45 9.76 11.32C9.87 11.21 10.01 11.03 10.13 10.89C10.26 10.74 10.3 10.64 10.38 10.47C10.46 10.31 10.42 10.16 10.36 10.04C10.3 9.92 9.8 8.7 9.59 8.2C9.39 7.71 9.18 7.78 9.03 7.77L8.55 7.76C8.38 7.76 8.11 7.82 7.89 8.07C7.66 8.32 7.03 8.91 7.03 10.11C7.03 11.32 7.91 12.48 8.03 12.65C8.16 12.81 9.77 15.29 12.24 16.36C12.83 16.61 13.28 16.76 13.64 16.88C14.23 17.06 14.77 17.04 15.2 16.97C15.68 16.9 16.67 16.37 16.88 15.79C17.08 15.21 17.08 14.71 17.02 14.61C16.96 14.51 16.82 14.45 16.57 14.39Z"/>
+            </svg>
+            <span>Confirmar Agendamento no WhatsApp</span>
+          </button>
+          <p class="text-center text-[11px] text-textMain/60 mt-2.5">
+            Ao clicar, abriremos o WhatsApp oficial com sua solicitação pré-preenchida para confirmação rápida da equipe.
+          </p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
